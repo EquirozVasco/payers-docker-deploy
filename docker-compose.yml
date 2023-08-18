@@ -1,0 +1,31 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      # Set environment variables for your Node.js app
+      PG_HOST: postgres
+      PG_PORT: 5432
+      PG_DATABASE: payers
+      PG_USER: admin
+      PG_PASSWORD: admin123
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:13
+    ports:
+      - "5432:5432"
+    environment:
+      # Set environment variables for the PostgreSQL container
+      POSTGRES_DB: payers
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+    volumes:
+      - node_db_data:/var/lib/postgresql/data
+
+volumes:
+  node_db_data: {}
