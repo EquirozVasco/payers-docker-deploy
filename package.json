@@ -1,16 +1,21 @@
 {
   "dependencies": {
     "express": "^4.18.2",
+    "nodemon": "^2.0.15",
     "pg": "^8.11.3",
     "sequelize": "^6.32.1",
-    "nodemon": "^2.0.15"
+    "wait-on": "^7.0.1"
   },
   "name": "payers",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^29.6.4",
+    "supertest": "^6.3.3"
+  },
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
