@@ -17,6 +17,10 @@ const Payer = db.define('payer', {
     payerTypeId: Sequelize.INTEGER
 });
 
-Payer.belongsTo(PayerType, { foreignKey: 'payerTypeId', as: 'payerType' });
+Payer.hasMany(PayerType,{
+    foreinkey: "payerId",
+    sourceKey: "id",
+})
+Payer.belongsTo(Payer, { foreignKey: 'payerId', targetId: "id" });
 
 module.exports = Payer;

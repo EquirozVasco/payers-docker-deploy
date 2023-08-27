@@ -5,7 +5,7 @@ const router = require('express').Router();
 const payerRoutes = () => {
 
     router.get('/', controller.getPayers);
-    router.get('/:payerId', controller.getPayer);
+    router.get('/:payerId', controller.getPayerById);
     router.post('/', controller.createPayer);
     router.patch('/:payerId', controller.updatePayer);
     router.delete('/:payerId', controller.deletePayer);

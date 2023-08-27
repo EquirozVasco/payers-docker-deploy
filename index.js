@@ -6,23 +6,12 @@ const payerTypeRoutes = require('./routes/payer-type.route')
 
 const app = express();
 
-app.use(bodyparser.json());
+app.use(express.json());
 app.use(bodyparser.urlencoded({ extended: false }));
 
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  next();
-});
-
-//test route
-app.get('/', (req, res, next) => {
-  res.send('Hello World');
-});
-
 //CRUD routes
-app.use('/payers', payerRoutes);
-app.use('/payerTypes',payerTypeRoutes);
+app.use('/payers', payerRoutes());
+app.use('/payerTypes',payerTypeRoutes());
 
 //error handling
 app.use((error, req, res, next) => {

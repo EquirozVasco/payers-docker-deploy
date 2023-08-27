@@ -4,21 +4,17 @@ const Payer = require('../models/payer.model');
 
 //get all payers
 exports.getPayers = (req, res, next) => {
-    Payer.findAll({
-        include: 'payerType'
-    })
+    Payer.findAll()
         .then(payers => {
-            res.status(200).json({ payers: payers });
+            res.status(200).json(payers);
         })
-        .catch(err => console.log(err));
+        .catch(err => res.json({err}));
 }
 
 //get payer by id
-exports.getPayer = (req, res, next) => {
+exports.getPayerById = (req, res, next) => {
     const payerId = req.params.payerId;
-    Payer.findByPk(payerId, {
-        include: 'payerType'
-    })
+    Payer.findByPk(payerId)
         .then(payer => {
             if (!payer) {
                 return res.status(404).json({ message: 'payer not found!' });
