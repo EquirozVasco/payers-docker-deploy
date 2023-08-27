@@ -22,7 +22,7 @@ services:
     environment:
       # Set environment variables for the PostgreSQL container
       POSTGRES_DB: payers
-      POSTGRES_USER: admin
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin123
     volumes:
       - node_db_data:/var/lib/postgresql/data
