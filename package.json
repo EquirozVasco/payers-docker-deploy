@@ -19,13 +19,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EquirozVasco/eps.git"
+    "url": "git+https://github.com/EquirozVasco/payers-docker-deploy.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/EquirozVasco/eps/issues"
+    "url": "https://github.com/EquirozVasco/payers-docker-deploy/issues"
   },
-  "homepage": "https://github.com/EquirozVasco/eps#readme",
+  "homepage": "https://github.com/EquirozVasco/payers-docker-deploy#readme",
   "description": ""
 }
