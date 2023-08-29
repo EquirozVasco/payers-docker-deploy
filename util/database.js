@@ -1,11 +1,12 @@
 const Sequelize = require('sequelize');
+import {config} from 'dotenv'
 
 const sequelize = new Sequelize(
-    'payers',
-    'postgres',
-    'admin123',
+    process.env.PG_DATABASE,
+    process.env.PG_USER,
+    process.env.PG_PASSWORD,
     {
-        host: 'postgres',
+        host: process.env.PG_HOST,
         dialect: 'postgres',
     }
 );

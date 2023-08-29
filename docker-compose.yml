@@ -7,11 +7,11 @@ services:
     ports:
       - "3000:3000"
     environment:
-      PG_HOST: postgres
+      PG_HOST: $PG_HOST
       PG_PORT: 5432
-      PG_DATABASE: payers
-      PG_USER: admin
-      PG_PASSWORD: admin123
+      PG_DATABASE: $PG_DATABASE
+      PG_USER: $PG_USER
+      PG_PASSWORD: $PG_PASSWORD
     depends_on:
       - postgres
   postgres:
@@ -19,9 +19,9 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_DB: payers
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: $POSTGRES_DB
+      POSTGRES_USER: $POSTGRES_USER
+      POSTGRES_PASSWORD: $POSTGRES_PASSWORD
     volumes:
       - node_db_data:/var/lib/postgresql/data
 
