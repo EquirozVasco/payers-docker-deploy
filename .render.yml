@@ -1,0 +1,4 @@
+services:
+  - name: app
+    buildCommand: docker-compose build app
+    startCommand: docker-compose up app
