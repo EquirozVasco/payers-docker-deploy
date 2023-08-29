@@ -2,10 +2,10 @@ const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize(
     'payers',
-    'postgres',
-    'admin123',
+    'payersuser',
+    'YZpgXPMws4PwLgOdUdwrbSxjglOIhblK',
     {
-        host: 'postgres',
+        host: 'dpg-cjn26lcdfrcc73dh3i60-a',
         dialect: 'postgres',
     }
 );
