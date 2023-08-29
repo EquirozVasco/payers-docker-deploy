@@ -7,7 +7,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      PG_HOST: postgres://payersuser:YZpgXPMws4PwLgOdUdwrbSxjglOIhblK@dpg-cjn26lcdfrcc73dh3i60-a/payers
+      PG_HOST: postgres://payersuser:YZpgXPMws4PwLgOdUdwrbSxjglOIhblK@dpg-cjn26lcdfrcc73dh3i60-a.oregon-postgres.render.com/payers
       PG_PORT: 5432
       PG_DATABASE: payers
       PG_USER: payersuser

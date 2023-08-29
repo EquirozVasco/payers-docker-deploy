@@ -5,7 +5,7 @@ const sequelize = new Sequelize(
     'payersuser',
     'YZpgXPMws4PwLgOdUdwrbSxjglOIhblK',
     {
-        host: 'postgres://payersuser:YZpgXPMws4PwLgOdUdwrbSxjglOIhblK@dpg-cjn26lcdfrcc73dh3i60-a/payers',
+        host: 'postgres://payersuser:YZpgXPMws4PwLgOdUdwrbSxjglOIhblK@dpg-cjn26lcdfrcc73dh3i60-a.oregon-postgres.render.com/payers',
         dialect: 'postgres',
     }
 );
