@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-import {config} from 'dotenv'
+const config = require('dotenv')
 
 const sequelize = new Sequelize(
     process.env.PG_DATABASE,
