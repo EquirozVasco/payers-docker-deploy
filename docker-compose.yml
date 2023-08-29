@@ -7,8 +7,23 @@ services:
     ports:
       - "3000:3000"
     environment:
-      PG_HOST: dpg-cjn26lcdfrcc73dh3i60-a
+      PG_HOST: postgres
       PG_PORT: 5432
       PG_DATABASE: payers
-      PG_USER: payersuser
-      PG_PASSWORD: YZpgXPMws4PwLgOdUdwrbSxjglOIhblK
+      PG_USER: admin
+      PG_PASSWORD: admin123
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:13
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: payers
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin123
+    volumes:
+      - node_db_data:/var/lib/postgresql/data
+
+volumes:
+  node_db_data: {}

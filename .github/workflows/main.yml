@@ -24,6 +24,9 @@ jobs:
     - name: Build and test
       run: |
         npm run test
+        
+    - name: Build PostgreSQL service
+      run: docker-compose up -d postgres
       
     - name: Build Docker image
       run: docker-compose build app
