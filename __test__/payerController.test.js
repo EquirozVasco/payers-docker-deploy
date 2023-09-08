@@ -13,9 +13,9 @@ describe('App', () => {
   },15000);
 
   //TEST TO FAIL
-  /*it('should respond with status 200 for unknown route', async () => {
+  it('should respond with status 200 for unknown route', async () => {
     const response = await request(app).get('/nonexistentroute');
     expect(response.status).toBe(200);
-  },15000);*/
+  },15000);
 });
 
